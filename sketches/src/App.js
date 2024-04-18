@@ -6,10 +6,11 @@ import './App.css';
 
 const Demo = lazy(() => import("./Pages/Home"))
 const Live = lazy(() => import("./Pages/Live"))
-const Test = lazy(() => import("./Pages/Test"))
 const Timeline = lazy(() => import("./Pages/Timeline"))
 
-
+const Marble = lazy(() => import("./Pages/Components/Sketches/Marble/MarblePage"))
+const Rings = lazy(() => import("./Pages/Components/Sketches/Lightrings/RingsPage"))
+const Glow = lazy(() => import("./Pages/Components/Sketches/Glow/GlowPage"))
 
 function App() {
   return (
@@ -17,9 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Demo />} />
         <Route path="/live" element={<Live />} />
-        <Route path="/test" element={<Test />} />
         <Route path="/timeline" element={<Timeline />} />
         
+        <Route path="/marble" element={<Marble />} />
+        <Route path="/rings" element={<Rings />} />
+        <Route path="/glow" element={<Glow />} />
       </Routes>
     </Suspense>
   );

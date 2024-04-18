@@ -1,7 +1,7 @@
 
-import { InkLine } from "../Functions/InkLine";
-import { Poly } from "../Functions/Watercolor";
-import { dataURLtoFile, shareFile } from "../Functions/filesharing";
+import { InkLine } from "../../Functions/InkLine";
+import { Poly } from "../../Functions/Watercolor";
+import { dataURLtoFile, shareFile } from "../../Functions/filesharing";
 import * as magic from "@indistinguishable-from-magic/magic-js"
 import p5 from "p5";
 
@@ -272,7 +272,7 @@ p.mousePressed = async () => {
   }
 
   if (!isMagic) {
-    magic.connect();
+    magic.connect({mesh: false, auto: true});
     console.log(magic.modules);
     isMagic = true;
     p.loop();

@@ -1,10 +1,10 @@
-import { InkLine } from "../Functions/InkLine";
-import { Poly } from "../Functions/Watercolor";
-import { dataURLtoFile, shareFile } from "../Functions/filesharing";
+import { InkLine } from "../../../Functions/InkLine";
+import { Poly } from "../../../Functions/Watercolor";
+import { dataURLtoFile, shareFile } from "../../../Functions/filesharing";
 import * as magic from "@indistinguishable-from-magic/magic-js"
 
 import { collection, addDoc, getDocs } from "firebase/firestore";
-import { db } from "../../../firebase.init";
+import { db } from "../../../../../firebase.init";
 
 
 let currentObject = {

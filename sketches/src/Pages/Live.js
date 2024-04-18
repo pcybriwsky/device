@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import Drawing from './Components/Sketches/LivePage';
+import Drawing from './Components/Sketches/Nebulae/Live/LivePage';
 
 const Home = () => {
   return (
