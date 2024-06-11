@@ -158,12 +158,12 @@ const myP5Sketch = (p) => {
     allTimeObject.temperature = p.random(-10, 38);
     allTimeObject.co2 = p.random(200, 600)
 
-    await getDocsFromCollection();
-    if(isTimelineStored){
-      dayObject = timeline[timeline.length - 1].dayObject;
-      allTimeObject = timeline[timeline.length - 1].allTimeObject;
-      initialization = timeline[0].timestamp;
-    }
+    // await getDocsFromCollection();
+    // if(isTimelineStored){
+    //   dayObject = timeline[timeline.length - 1].dayObject;
+    //   allTimeObject = timeline[timeline.length - 1].allTimeObject;
+    //   initialization = timeline[0].timestamp;
+    // }
 
   }
 
@@ -264,11 +264,11 @@ const myP5Sketch = (p) => {
       p.text("Initialized: " + initializationDate.toLocaleString(), p.width - 25, p.height - lineHeight);
       
       // Firebase initialization
-      if (!initializeFirebaseWrite) {
-        initializeFirebaseWrite = true;
-        addDocToCollection();
-        setInterval(addDocToCollection, 1000 * 60 * 60 * 6); // Every 6 hours
-      }
+      // if (!initializeFirebaseWrite) {
+      //   initializeFirebaseWrite = true;
+      //   addDocToCollection();
+      //   setInterval(addDocToCollection, 1000 * 60 * 60 * 6); // Every 6 hours
+      // }
     }
 
     else if (isMagic && magic.modules != undefined) {
@@ -670,7 +670,7 @@ const myP5Sketch = (p) => {
 
     if (!isMagic) {
       // MUST BE TRUE FOR MAGIC TO WORK
-      let meshVal = true;
+      let meshVal = false;
       magic.connect({ mesh: meshVal, auto: false });
       if (meshVal) {
         console.log("In mesh mode for production, this is correct state for UVa");

@@ -11,6 +11,9 @@ const Timeline = lazy(() => import("./Pages/Timeline"))
 const Marble = lazy(() => import("./Pages/Components/Sketches/Marble/MarblePage"))
 const Rings = lazy(() => import("./Pages/Components/Sketches/Lightrings/RingsPage"))
 const Glow = lazy(() => import("./Pages/Components/Sketches/Glow/GlowPage"))
+const Flower = lazy(() => import("./Pages/Components/Sketches/Flower/FlowerPage"))
+const Waves = lazy(() => import("./Pages/Components/Sketches/Waves/WavesPage"))
+const Trees = lazy(() => import("./Pages/Components/Sketches/Trees/TreesPage"))
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Route path="/marble" element={<Marble />} />
         <Route path="/rings" element={<Rings />} />
         <Route path="/glow" element={<Glow />} />
+        <Route path="/flower" element={<Flower />} />
+        <Route path="/waves" element={<Waves />} />
+        <Route path="/trees" element={<Trees />} />
       </Routes>
     </Suspense>
   );
